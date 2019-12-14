@@ -1,8 +1,8 @@
 #include <ESP8266WiFi.h>
 
 #ifndef STASSID
-#define STASSID "AndroidAPB1A6" //WiFi network's name
-#define STAPSK  "03031996"      //WiFi network's password
+#define STASSID "NETWORK NAME" //WiFi network's name
+#define STAPSK "NETWORK PASSWORD" //WiFi network's password
 #endif
 
 //function declarations
@@ -17,7 +17,7 @@ String finalString;
 char mybuffer[1024]={0};
 
 const int port = 4444;//server port
-byte server_ip[] = { 212, 179, 205, 15 };//server address 
+byte server_ip[] = { x, x, x, x };//server address 
 
 
 void setup() {
@@ -109,7 +109,7 @@ int sendDataToServer(){
   // This will send a string to the server
   Serial.println("sending data to server");
   if (client.connected()) {
-    client.println(mybuffer); //data example: "name=adar;id=315524868;age=24;serial_number=123;beat_per_minute=70;time=10:00;date=12/09/2019;"
+    client.println(mybuffer); //data example: "name=David;id=123456789;age=24;serial_number=123;beat_per_minute=70;time=10:00;date=12/09/2019;"
      Serial.println("Data sent");
     client.stop(); //close the connection
     Serial.println("Connection to server closed");
