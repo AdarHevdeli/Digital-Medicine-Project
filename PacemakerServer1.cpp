@@ -10,7 +10,7 @@ int main() {
 	char* dataArray[7];
 	char* quary = nullptr;
 	char dataStr[1024] = "";
-	//dataStr example "name=adar;id=315524868;age=23;serial_number=123;beat_per_minute=70;time=10:00;date=12/09/2019;" ;
+	//dataStr example "name=David;id=123456789;age=24;serial_number=123;beat_per_minute=70;time=10:00;date=12/09/2019;" ;
 
 	while (true) {
 		TCPconnection(dataStr);
@@ -132,7 +132,6 @@ void TCPconnection(char* dataStr) {
 
 }
 
-//char* name, char* id, char* age, char* serial_number, char* beat_per_minute, char* time, char* date
 
 void processDataStr(char* dataStr, char** dataArray) {
 
@@ -186,7 +185,7 @@ PGconn* ConnectDB()
 	PGconn* conn = NULL;
 
 	// Make a connection to the database
-	conn = PQconnectdb("user=gisuser1 password=gisuser#1 dbname=gisuser1db hostaddr=212.179.205.15 port=5432");
+	conn = PQconnectdb("user=<USER> password=<PASSWORD> dbname=<DBNAME> hostaddr=X.X.X.X port=X");
 
 	// Check to see that the backend connection was successfully made
 	if (PQstatus(conn) != CONNECTION_OK)
