@@ -21,4 +21,4 @@ void freeAllocations(char** dataArray, char* quary);
 void creatQuary(char** dataArray, char** quary);
 void CloseConn(PGconn* conn);
 void InsertPatientRec(PGconn* conn, char* quary);
-PGconn* ConnectDB();
+PGconn* ConnectDB(); 
