@@ -36,7 +36,7 @@ void TCPconnection(char* dataStr) {
 	int err;
 
 	/* Use the MAKEWORD(lowbyte, highbyte) macro declared in Windef.h */
-	wVersionRequested = MAKEWORD(2, 2);
+	wVersionRequested = MAKEWORD(2, 2); 
 
 	err = WSAStartup(wVersionRequested, &wsaData);
 	if (err != 0) {
